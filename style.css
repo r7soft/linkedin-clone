@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    background-color: #dadadd;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 52px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.container {
+    > .content-container {
+        width: 1128px;
+        margin: 24px auto 0;
+        display: flex;
+        gap: 25px;
+
+        > section {
+            width: inherit;
+            > .user-details {
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: #fff;
+                margin-bottom: 25px;
+
+                > .cover-photo-container {
+                    height: 201px;
+                    background-color: rgb(99, 136, 189);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    > #cover-photo-img {
+                        width: 100%;
+                        display: none;
+                    }
+
+                    > #edit-cover-photo-input-label {
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+
+                    > #edit-cover-photo-input {
+                        display: none;
+                    }
+                }
+
+                > .text {
+                    height: 201px;
+                    position: relative;
+
+                    > .user-photo-container {
+                        height: 152px;
+                        width: 153px;
+                        border-radius: 50%;
+                        background-color: #dadada;
+                        position: absolute;
+                        transform: translate(20px, -60%);
+                        border: 5px solid #fff;
+                        cursor: pointer;
+                        overflow: hidden;
+
+                        > #user-photo-img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        > aside {
+            width: 300px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+    }
+}
+
+#user-photo-edit-container {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 700px;
+    background-color: #333;
+    border-radius: 10px;
+    display: none;
+    z-index: 999999;
+
+    > h2{
+        margin: 10px;
+        color: #fff;
+    }
+
+    > #user-photo-edit-container-close-button {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: #dadada;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    > #user-photo-preview-container {
+
+        > #user-photo-preview {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 50px auto 50px;
+            background-color: #dadada;
+            overflow: hidden;
+           
+            > #user-photo-preview-img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: none;
+            }
+            > #user-photo-preview-video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: none;
+            }
+        }
+    }
+
+    > .user-photo-edit-container-footer {
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+
+        > #edit-user-photo-input-label {
+            height: 30px;
+            width: 120px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        > #edit-user-photo-input {
+            display: none;
+        }
+
+        > #edit-user-photo-camera-button{
+            height: 30px;
+            width: 120px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        > #edit-user-photo-camera-capture-button{
+            height: 30px;
+            width: 120px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        > #edit-user-photo-save-button{
+            height: 30px;
+            width: 120px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}

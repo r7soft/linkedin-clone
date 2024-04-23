@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <nav>
+
+        </nav>
+
+        <div class="container">
+            <div class="content-container">
+                <section>
+                    <div class="user-details">
+                        <div class="cover-photo-container">
+                            <label id="edit-cover-photo-input-label" for="edit-cover-photo-input"><i
+                                    class="ri-pencil-fill"></i></label>
+                            <input type="file" id="edit-cover-photo-input" accept="image/*">
+                            <img id="cover-photo-img" src="#" alt="cover photo">
+                        </div>
+                        <div class="text">
+                            <div class="user-photo-container">
+                                <img id="user-photo-img" src="#" alt="user photo">
+                            </div>
+                           
+                        </div>
+                    </div>
+                </section>
+                <aside></aside>
+            </div>
+        </div>
+
+        <div id="user-photo-edit-container">
+            <button id="user-photo-edit-container-close-button"><i class="ri-close-line"></i> </button>
+            <h2>User profile</h2>
+            <div id="user-photo-preview-container">
+                <div id="user-photo-preview">
+                    <img id="user-photo-preview-img" src="#" alt="preview user photo">
+
+                    <video id="user-photo-preview-video" autoplay></video>
+                </div>
+
+            </div>
+            <div class="user-photo-edit-container-footer">
+                <label id="edit-user-photo-input-label" for="edit-user-photo-input">Upload photo</label>
+                <input type="file" id="edit-user-photo-input" accept="image/*">
+                <button id="edit-user-photo-camera-button">Use camera</button>
+                <button id="edit-user-photo-camera-capture-button">Capture</button>
+
+
+                <button id="edit-user-photo-save-button">Save</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
